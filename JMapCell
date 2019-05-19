@@ -8,14 +8,11 @@ public class JMapCell extends JComponent {
     boolean path = false;
     public JMapCell(boolean pass)
     {
-        // Set the preferred cell size, to drive the initial window size.
         setPreferredSize(CELL_SIZE);
-        
         setPassable(pass);
     }
     public JMapCell()
     {
-        // Call the other constructor, specifying true for "passable".
         this(true);
     }
     public void setEndpoint(boolean end)
@@ -45,9 +42,7 @@ public class JMapCell extends JComponent {
     {
         if (passable)
         {
-            // Passable cell.  Indicate its state with a border.
             setBackground(Color.WHITE);
-
             if (endpoint)
                 setBackground(Color.CYAN);
             else if (path)
